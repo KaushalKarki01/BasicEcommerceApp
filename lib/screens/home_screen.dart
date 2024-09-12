@@ -1,5 +1,4 @@
 import 'package:dummycommerce/core/colors/root_color.dart';
-import 'package:dummycommerce/core/styles/text_style.dart';
 import 'package:dummycommerce/core/widgets/category_list/category_list.dart';
 import 'package:dummycommerce/core/widgets/product/all_products.dart';
 import 'package:dummycommerce/core/widgets/search/search_field.dart';
@@ -27,9 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Hi, Kaushal',
-                    style: RootTextStyle.rootTextStyle(
+                    style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w800,
                         color: Colors.black87),
