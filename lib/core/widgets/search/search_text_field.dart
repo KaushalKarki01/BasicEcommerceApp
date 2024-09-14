@@ -1,3 +1,4 @@
+import 'package:dummycommerce/core/colors/root_color.dart';
 import 'package:flutter/material.dart';
 
 class SearchTextField extends StatelessWidget {
@@ -7,15 +8,16 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: RootColor.borderColor,
       controller: controller,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(6.0),
-          borderSide: const BorderSide(color: Colors.grey),
+          borderSide: const BorderSide(color: RootColor.btnColor),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(6.0),
-          borderSide: const BorderSide(color: Colors.green),
+          borderSide: const BorderSide(color: RootColor.borderColor),
         ),
       ),
     );

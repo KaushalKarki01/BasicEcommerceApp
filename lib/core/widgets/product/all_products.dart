@@ -1,5 +1,6 @@
 import 'package:dummycommerce/core/widgets/product/product_card.dart';
 import 'package:dummycommerce/model/product_model.dart';
+import 'package:dummycommerce/screens/product_detail_screen.dart';
 import 'package:dummycommerce/service/api/api_service.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +52,18 @@ class _AllProductsState extends State<AllProducts> {
             itemCount: allProducts!.length,
             itemBuilder: (context, index) {
               final product = allProducts[index];
-              return ProductCard(product: product);
+              return ProductCard(
+                product: product,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ProductDetailScreen(product: product),
+                    ),
+                  );
+                },
+              );
             },
           );
         } else {

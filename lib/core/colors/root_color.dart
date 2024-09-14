@@ -6,4 +6,5 @@ class RootColor {
   static const Color borderColor = Color(0xffb3b2ac);
   static const Color titleColor = Color(0xff515151);
   static const Color priceColor = Color(0xff202020);
+  static const Color btnColor = Color(0xff43AA8B);
 }

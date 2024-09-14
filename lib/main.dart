@@ -1,9 +1,14 @@
 import 'package:dummycommerce/screens/home_screen.dart';
+import 'package:dummycommerce/service/provider/cart_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    const MyApp(),
+    ChangeNotifierProvider(
+      create: (context) => CartProvider(),
+      child: const MyApp(),
+    ),
   );
 }
 
@@ -16,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'MainFont',
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

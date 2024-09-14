@@ -30,7 +30,6 @@ class ApiService {
       final List<dynamic> body = jsonDecode(response.body);
       final List<Product> products =
           body.map((product) => Product.fromJson(product)).toList();
-      print(products);
       return products;
     } else {
       throw Exception('Failed to get products');
